@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>Main</title>
-
-    <link rel="stylesheet" href="main.css">
-
-    <script type="text/montage-serialization">
-        {
-            "owner": {
-                "properties": {
-                    "element": {"#": "main"}
-                }
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Main
+        </title>
+        <link rel="stylesheet" href="main.css">
+        <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "main"}
+            }
+        },
+        "menu": {
+            "prototype": "ui/menu.reel",
+            "properties": {
+                "element": {"#": "menu"}
+            },
+            "bindings": {
+                "items": {"<-": "@owner.tree.children"}
             }
         }
-    </script>
-</head>
-<body>
-    <div data-montage-id="main" data-montage-skin="light" class="Main"></div>
-</body>
+    }
+        </script>
+    </head>
+    <body>
+        <div data-montage-id="main" data-montage-skin="light" class="Main">
+            <div data-montage-id="menu"></div>
+        </div>
+    </body>
 </html>
