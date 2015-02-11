@@ -13,5 +13,9 @@ exports.Menu = Component.specialize(/** @lends Menu# */ {
         value: function Menu() {
             this.super();
         }
+    },
+    
+    items:{
+        value null
     }
 });
