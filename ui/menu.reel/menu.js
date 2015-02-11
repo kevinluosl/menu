@@ -16,6 +16,6 @@ exports.Menu = Component.specialize(/** @lends Menu# */ {
     },
     
     items:{
-        value null
+        value:null
     }
 });
