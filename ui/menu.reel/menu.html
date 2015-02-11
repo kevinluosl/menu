@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="menu.css">
-    <script type="text/montage-serialization">
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="menu.css">
+        <script type="text/montage-serialization">
     {
         "owner": {
             "properties": {
@@ -15,18 +15,25 @@
             "properties": {
                 "element": {"#": "condition"},
                 "removalStrategy": "hide"
+            },
+            "bindings": {
+                "condition": {"<-": "@repetition:iteration.object.children"}
+            }
+        },
+        "repetition": {
+            "prototype": "montage/ui/repetition.reel",
+            "properties": {
+                "element": {"#": "repetition"}
             }
         },
         "submenu": {
             "prototype": "ui/menu.reel",
             "properties": {
-                "element": {"#": "submenu"}
-            }
-        },        
-        "repetition": {
-            "prototype": "montage/ui/repetition.reel",
-            "properties": {
-                "element": {"#": "repetition"}
+                "element": {"#": "submenu"},
+                "removalStrategy": "hide"
+            },
+            "bindings": {
+                "items": {"<-": "@repetition:iteration.object.children"}
             }
         },
         "title": {
@@ -34,19 +41,22 @@
             "properties": {
                 "element": {"#": "title"},
                 "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@repetition:iteration.object.name"}
             }
         }
     }
-    </script>
-</head>
-<body>
-    <div data-montage-id="owner" class="Menu">
-        <ul data-montage-id="repetition">
-            <p data-montage-id="title"></p>
-            <div data-montage-id="condition">
-                <div data-montage-id="submenu"></div>
-            </div>
-        </ul>
-    </div>
-</body>
+        </script>
+    </head>
+    <body>
+        <div data-montage-id="owner" class="Menu">
+            <ul data-montage-id="repetition">
+                <p data-montage-id="title"></p>
+                <div data-montage-id="condition">
+                    <div data-montage-id="submenu"></div>
+                </div>
+            </ul>
+        </div>
+    </body>
 </html>
