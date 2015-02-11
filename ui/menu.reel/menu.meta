@@ -10,12 +10,11 @@
       }
     }
   },
-  "blueprint_unnamed_items": {
+  "blueprint_unnamed_tree": {
     "prototype": "montage/core/meta/property-blueprint",
     "properties": {
-      "name": "items",
-      "blueprint": {"@": "root"},
-      "valueType": "object"
+      "name": "tree",
+      "blueprint": {"@": "root"}
     }
   },
   "root": {
@@ -24,17 +23,17 @@
       "name": null,
       "parent": {"@": "blueprint_component_reference"},
       "propertyBlueprints": [
-        {"@": "blueprint_unnamed_items"}
+        {"@": "blueprint_unnamed_tree"}
       ],
       "propertyBlueprintGroups": {
-        "Menu": [
-          {"@": "blueprint_unnamed_items"}
+        "Main": [
+          {"@": "blueprint_unnamed_tree"}
         ]
       },
       "module": {
-        "%": "ui/menu.reel"
+        "%": "ui/main.reel"
       },
-      "exportName": "Menu"
+      "exportName": "Main"
     }
   }
 }
