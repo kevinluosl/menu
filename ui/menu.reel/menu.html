@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title></title>
-        <link rel="stylesheet" type="text/css" href="menu.css">
-        <script type="text/montage-serialization">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="menu.css">
+    <script type="text/montage-serialization">
     {
         "owner": {
             "properties": {
@@ -24,6 +24,9 @@
             "prototype": "montage/ui/repetition.reel",
             "properties": {
                 "element": {"#": "repetition"}
+            },
+            "bindings": {
+                "content": {"<-": "@owner.items"}
             }
         },
         "submenu": {
@@ -47,16 +50,16 @@
             }
         }
     }
-        </script>
-    </head>
-    <body>
-        <div data-montage-id="owner" class="Menu">
-            <ul data-montage-id="repetition">
-                <p data-montage-id="title"></p>
-                <div data-montage-id="condition">
-                    <div data-montage-id="submenu"></div>
-                </div>
-            </ul>
-        </div>
-    </body>
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="Menu">
+        <ul data-montage-id="repetition">
+            <p data-montage-id="title"></p>
+            <div data-montage-id="condition">
+                <div data-montage-id="submenu"></div>
+            </div>
+        </ul>
+    </div>
+</body>
 </html>
